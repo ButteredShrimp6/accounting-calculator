@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:drawable/alert_dark_frame"
+    android:id="@+id/linearLayout1"
+    android:animateLayoutChanges="true"
+    android:backgroundTint="#E5D3B3">
+    <TextView
+        android:text=""
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView2" />
+    <TextView
+        android:text="Sales Computation"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:id="@+id/textView1"
+
+        android:textSize="60px"
+        android:textStyle="bold"
+        app:fontFamily="sdf"
+        android:layout_marginLeft="77px" />
+    <TextView
+        android:text=""
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView3" />
+    <Button
+        android:text="INTEREST"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/button1"
+        android:layout_gravity="center"
+        android:clickable="true"
+        android:layout_marginHorizontal="80px"
+        android:layout_marginVertical="20px"
+        app:backgroundTint="#987554"/>
+    <Button
+        android:text="INTEREST RATE"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/button2"
+        android:layout_gravity="center"
+        android:clickable="true"
+        android:layout_marginVertical="20px"
+        android:layout_marginHorizontal="80px" 
+        app:backgroundTint="#987554"/>/>
+    
+    <Button
+        android:text="SIMPLE INTEREST"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/button3"
+        android:layout_gravity="center"
+        android:clickable="true"
+        android:layout_marginVertical="20px"
+        android:layout_marginHorizontal="80px"
+        app:backgroundTint="#987554"/>
+    <Button
+        android:text="COMPOUND INTEREST"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/button4"
+        android:layout_gravity="center"
+        android:clickable="true"
+        android:layout_marginVertical="20px"
+        android:layout_marginHorizontal="80px"
+        app:backgroundTint="#987554"/>
+    <Button
+        android:text="DISCOUNT"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/button5"
+        android:layout_gravity="center"
+        android:clickable="true"
+        android:layout_marginVertical="20px"
+        android:layout_marginHorizontal="80px" 
+        app:backgroundTint="#987554"/>
+    <Button
+        android:text="STRAIGHT LINE Depreciation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/button6"
+        android:layout_gravity="center"
+        android:clickable="true"
+        android:layout_marginVertical="20px"
+        android:layout_marginHorizontal="80px"
+        app:backgroundTint="#987554"/>
+    <Button
+        android:text="UNIT OF PRODUCT"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/button8"
+        android:layout_gravity="center"
+        android:clickable="true"
+        android:layout_marginVertical="20px"
+        android:layout_marginHorizontal="80px"
+        app:backgroundTint="#987554"/>
+
+    
+    
+</LinearLayout>

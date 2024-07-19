@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:drawable/alert_light_frame"
+    android:backgroundTint="#E5D3B3"
+
+    >
+    <TextView
+        android:text="Lets Compute For:"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:id="@+id/textView1" />
+    <TextView
+        android:text="Discount"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView2"
+        android:textSize="90px"
+        android:textStyle="bold"
+        android:layout_marginTop="15px"
+        android:layout_marginLeft="3.0dp"
+        android:gravity="center" />
+    <TextView
+        android:text="  Enter List Price:"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView3"
+        android:layout_marginTop="30px"
+        android:layout_marginLeft="0.0dp" 
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText1"
+        android:inputType="none|number|numberDecimal" />
+    <TextView
+        android:text="  Enter Selling Price:"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView4"
+        android:layout_marginTop="30px" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText2"
+        android:inputType="none|numberDecimal|number" />
+    <Button
+        android:text="enter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/Dbtn" 
+        android:layout_gravity="center"
+        android:clickable="true"
+        android:layout_marginHorizontal="130px"
+        android:layout_marginVertical="20px"
+        android:textStyle="bold"
+        android:backgroundTint="#987554"
+        />
+          
+    <TextView
+        android:text=""
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="90px"
+        android:textStyle="bold"
+        android:id="@+id/textView6"
+        android:textColor="#ff000000" />
+
+</LinearLayout>

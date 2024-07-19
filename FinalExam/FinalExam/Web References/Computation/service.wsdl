@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tns="urn:businesscomp" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns="http://schemas.xmlsoap.org/wsdl/" targetNamespace="urn:businesscomp" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="urn:businesscomp">
+      <xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+      <xsd:import namespace="http://schemas.xmlsoap.org/wsdl/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="calculateInterestRequest">
+    <wsdl:part name="principal" type="xsd:float" />
+    <wsdl:part name="interestRate" type="xsd:float" />
+    <wsdl:part name="time" type="xsd:float" />
+  </wsdl:message>
+  <wsdl:message name="calculateInterestResponse">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="calculateInterestRateRequest">
+    <wsdl:part name="simplePrincipal" type="xsd:float" />
+    <wsdl:part name="principal" type="xsd:float" />
+    <wsdl:part name="time" type="xsd:float" />
+  </wsdl:message>
+  <wsdl:message name="calculateInterestRateResponse">
+    <wsdl:part name="return" type="xsd:float" />
+  </wsdl:message>
+  <wsdl:message name="SimpleInterestRequest">
+    <wsdl:part name="principal" type="xsd:float" />
+    <wsdl:part name="rate" type="xsd:float" />
+    <wsdl:part name="time" type="xsd:float" />
+  </wsdl:message>
+  <wsdl:message name="SimpleInterestResponse">
+    <wsdl:part name="return" type="xsd:float" />
+  </wsdl:message>
+  <wsdl:message name="CompoundInterestRequest">
+    <wsdl:part name="prin" type="xsd:float" />
+    <wsdl:part name="rate" type="xsd:float" />
+    <wsdl:part name="time" type="xsd:float" />
+    <wsdl:part name="n" type="xsd:float" />
+  </wsdl:message>
+  <wsdl:message name="CompoundInterestResponse">
+    <wsdl:part name="return" type="xsd:float" />
+  </wsdl:message>
+  <wsdl:message name="calculateDiscountRequest">
+    <wsdl:part name="listPrice" type="xsd:float" />
+    <wsdl:part name="sellingPrice" type="xsd:float" />
+  </wsdl:message>
+  <wsdl:message name="calculateDiscountResponse">
+    <wsdl:part name="return" type="xsd:float" />
+  </wsdl:message>
+  <wsdl:message name="straightLineDepreciationRequest">
+    <wsdl:part name="cost" type="xsd:float" />
+    <wsdl:part name="residual" type="xsd:float" />
+    <wsdl:part name="assetlife" type="xsd:float" />
+  </wsdl:message>
+  <wsdl:message name="straightLineDepreciationResponse">
+    <wsdl:part name="return" type="xsd:float" />
+  </wsdl:message>
+  <wsdl:message name="unitofProductRequest">
+    <wsdl:part name="cost" type="xsd:float" />
+    <wsdl:part name="salvagevalue" type="xsd:float" />
+    <wsdl:part name="usefulLife" type="xsd:float" />
+  </wsdl:message>
+  <wsdl:message name="unitofProductResponse">
+    <wsdl:part name="return" type="xsd:float" />
+  </wsdl:message>
+  <wsdl:portType name="AccountancyComputationsPortType">
+    <wsdl:operation name="calculateInterest">
+      <wsdl:input message="tns:calculateInterestRequest" />
+      <wsdl:output message="tns:calculateInterestResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="calculateInterestRate">
+      <wsdl:input message="tns:calculateInterestRateRequest" />
+      <wsdl:output message="tns:calculateInterestRateResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="SimpleInterest">
+      <wsdl:input message="tns:SimpleInterestRequest" />
+      <wsdl:output message="tns:SimpleInterestResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="CompoundInterest">
+      <wsdl:input message="tns:CompoundInterestRequest" />
+      <wsdl:output message="tns:CompoundInterestResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="calculateDiscount">
+      <wsdl:input message="tns:calculateDiscountRequest" />
+      <wsdl:output message="tns:calculateDiscountResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="straightLineDepreciation">
+      <wsdl:input message="tns:straightLineDepreciationRequest" />
+      <wsdl:output message="tns:straightLineDepreciationResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="unitofProduct">
+      <wsdl:input message="tns:unitofProductRequest" />
+      <wsdl:output message="tns:unitofProductResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="AccountancyComputationsBinding" type="tns:AccountancyComputationsPortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc" />
+    <wsdl:operation name="calculateInterest">
+      <soap:operation soapAction="http://172.18.17.72/it140p/service.php/calculateInterest" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="calculateInterestRate">
+      <soap:operation soapAction="http://172.18.17.72/it140p/service.php/calculateInterestRate" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SimpleInterest">
+      <soap:operation soapAction="http://172.18.17.72/it140p/service.php/SimpleInterest" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CompoundInterest">
+      <soap:operation soapAction="http://172.18.17.72/it140p/service.php/CompoundInterest" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="calculateDiscount">
+      <soap:operation soapAction="http://172.18.17.72/it140p/service.php/calculateDiscount" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="straightLineDepreciation">
+      <soap:operation soapAction="http://172.18.17.72/it140p/service.php/straightLineDepreciation" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="unitofProduct">
+      <soap:operation soapAction="http://172.18.17.72/it140p/service.php/unitofProduct" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="AccountancyComputations">
+    <wsdl:port name="AccountancyComputationsPort" binding="tns:AccountancyComputationsBinding">
+      <soap:address location="http://172.18.17.72:8080/it140p/service.php" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
